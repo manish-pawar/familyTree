@@ -1,0 +1,50 @@
+h3 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+.card-header {
+  background: none !important;
+  padding: 20px;
+}
+.card-footer {
+  background: none !important;
+}
+.card-header h1 {
+  font-size: 30px !important;
+  font-weight: 400 !important;
+}
+.card {
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px rgba(0, 0, 0, 0.1), 5px -5px 10px rgba(0, 0, 0, 0.1) !important;
+}
+.formBox {
+  height: 500px;
+  width: 700px;
+  margin: 30px auto;
+}
+.submit-box {
+  height: 50px;
+  width: 100%;
+  position: relative !important;
+}
+.submit-box .subbutton {
+  position: absolute;
+  left: 41%;
+  margin: auto !important;
+  border: none !important;
+  outline: none !important;
+  background: green;
+  color: #fff;
+  margin-top: 20px !important;
+  padding: 7px 40px;
+}
+.the-chart-button {
+  left: 41%;
+  margin: auto !important;
+  border: none !important;
+  outline: none !important;
+  background: green;
+  color: #fff;
+  margin-top: 20px !important;
+  padding: 7px 40px;
+}
