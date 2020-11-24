@@ -8,6 +8,8 @@ function App() {
   const [userRelation, setUserRelation] = useState({ selectPerson: '', is:'', of:'' });
   const [formToggle, setFormToggle] = useState(true);
   const [chartToggle, setChartToggle] = useState(false);
+  
+  
   let fTree = localStorage.getItem("FamilyTree");
   
   let nameList12 = JSON.parse(localStorage.getItem("namelistsFamily"));
@@ -80,8 +82,9 @@ function App() {
         setChartToggle(false);
         
         // console.log(JSON.parse(fTree));
-        if(fTree !== 'undefined'){
+        if(fTree !== 'undefined' && fTree !== null){
           gettingNames(); 
+          console.log("got");
         }
         else if ( fTree === 'undefined'){
             
@@ -283,12 +286,13 @@ function parentIterator(children, d, d1 , data){
     
       <select className="form-control" onChange={  e => setUserRelation(  { ...userRelation , selectPerson: e.target.value})}>
           <option value="">Please select</option>
-          { nameList12.map((item , index) => {
-               return (
-                  
-                  <option value={index} >{ item[0]}</option>
-               );
-            })
+          { (nameList12 !== null  ) && (nameList12.map((item , index) => {
+                return (
+                    
+                    <option value={index} >{ item[0]}</option>
+                );
+              })
+            )
           }
           
     </select>
