@@ -454,7 +454,8 @@ function parentIterator(children, d, d1 , data){
   ) ;
   return (
     <div className="App">
-      <button className="the-chart-button" onClick={onChartsee}>see charts</button>
+      { (fTree !== null ) && (<button className="the-chart-button" onClick={onChartsee}>see charts</button>) }
+      
       
       { chartToggle && <p>it's loaded below please find it</p>}
       { formToggle? addingForm:selectionForm}
